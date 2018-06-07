@@ -1,0 +1,30 @@
+{
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint *.js"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "clone": "^2.1.1",
+    "core-js": "^2.5.7",
+    "debug": "^3.1.0",
+    "firebase-admin": "^5.12.1",
+    "firebase-functions": "^1.0.3",
+    "lodash": "^4.17.10",
+    "nuxt-edge": "^2.0.0-25468832.6578bd7",
+    "vue": "^2.5.16",
+    "vue-meta": "^1.5.0",
+    "vue-router": "^3.0.1",
+    "vue-server-renderer": "^2.5.16",
+    "vue-template-compiler": "^2.5.16",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.12.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-promise": "^3.6.0"
+  },
+  "private": true
+}

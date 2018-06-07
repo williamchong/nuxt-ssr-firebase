@@ -1,5 +1,14 @@
 {
+  "functions": {
+    "source": "functions",
+    "predeploy": [
+      "npm --prefix functions run lint && npm --prefix src run lint && npm --prefix src run build"
+    ]
+  },
   "hosting": {
+    "predeploy": [
+      "rm -rf public/ && cp -r functions/nuxt/dist/ public/"
+    ],
     "public": "public",
     "ignore": [
       "firebase.json",

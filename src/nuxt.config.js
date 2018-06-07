@@ -20,7 +20,21 @@ module.exports = {
   /*
   ** Build configuration
   */
+  buildDir: '../functions/nuxt',
   build: {
+    extractCSS: true,
+    babel: {
+      presets: ({ isServer }) => [
+        [
+          'vue-app',
+          {
+            targets: isServer
+              ? { node: '6.14.0' }
+              : { browsers: ['defaults'] },
+          },
+        ],
+      ],
+    },
     /*
     ** Run ESLint on save
     */
