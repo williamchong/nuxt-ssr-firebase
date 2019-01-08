@@ -1,0 +1,38 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/app
+    docker:
+      - image: node:10
+    steps:
+      - checkout
+      - restore_cache:
+          key: nuxt-ssr-{{ checksum "src/package.json" }}-{{ checksum "src/package-lock.json" }}
+      - restore_cache:
+          key: nuxt-ssr-{{ checksum "functions/package.json" }}-{{ checksum "functions/package-lock.json" }}
+      - run:
+          name: Dependencies
+          command: npm --prefix src install && npm --prefix functions install && cp src/nuxt.config.js functions/
+      - run:
+          name: Lint Test
+          command: npm --prefix src run lint && npm --prefix functions run lint
+      - run:
+          name: Build
+          command: npm --prefix src run build
+      - run:
+          name: Server Test
+          command: npm --prefix src start
+          background: true
+      - run:
+          name: Curl Test
+          command: |
+            sleep 5
+            curl --retry 10 --retry-delay 5 -v http://127.0.0.1:3000/
+      - save_cache:
+          key: nuxt-ssr-{{ checksum "src/package.json" }}-{{ checksum "src/package-lock.json" }}
+          paths:
+            - ./src/node_modules
+      - save_cache:
+          key: nuxt-ssr-{{ checksum "functions/package.json" }}-{{ checksum "functions/package-lock.json" }}
+          paths:
+            - ./functions/node_modules
