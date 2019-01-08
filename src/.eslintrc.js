@@ -8,8 +8,9 @@ module.exports = {
     parser: 'babel-eslint'
   },
   extends: [
-    'plugin:vue/essential',
-    'airbnb-base'
+    'airbnb-base',
+    'plugin:vue/recommended',
+    'plugin:nuxt/recommended',
   ],
   rules: {
     'import/extensions': ['error', 'always', {
