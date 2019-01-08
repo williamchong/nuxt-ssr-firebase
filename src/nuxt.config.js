@@ -20,7 +20,7 @@ module.exports = {
   /*
   ** Build configuration
   */
-  buildDir: '../functions/nuxt',
+  buildDir: 'nuxt',
   build: {
     extractCSS: true,
     babel: {

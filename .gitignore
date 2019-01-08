@@ -1,3 +1,6 @@
+.firebase
 node_modules
 functions/nuxt
+functions/dist/
+functions/nuxt.config.js
 public
