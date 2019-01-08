@@ -1,16 +1,18 @@
 {
   "name": "functions",
   "description": "Cloud Functions for Firebase",
+  "engines": {
+    "node": "8"
+  },
   "scripts": {
     "lint": "./node_modules/.bin/eslint *.js"
   },
   "dependencies": {
-    "babel-polyfill": "^6.26.0",
     "clone": "^2.1.1",
     "core-js": "^2.5.7",
     "debug": "^3.1.0",
-    "firebase-admin": "^5.12.1",
-    "firebase-functions": "^1.0.3",
+    "firebase-admin": "^6.4.0",
+    "firebase-functions": "^2.1.0",
     "lodash": "^4.17.10",
     "nuxt-edge": "^2.0.0-25468832.6578bd7",
     "vue": "^2.5.16",
