@@ -26,10 +26,10 @@ module.exports = {
     babel: {
       presets: ({ isServer }) => [
         [
-          'vue-app',
+          '@nuxt/babel-preset-app',
           {
             targets: isServer
-              ? { node: '6.14.0' }
+              ? { node: '8.11.1' }
               : { browsers: ['defaults'] },
           },
         ],
