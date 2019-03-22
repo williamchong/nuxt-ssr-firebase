@@ -8,6 +8,7 @@
     "lint": "./node_modules/.bin/eslint *.js"
   },
   "dependencies": {
+    "acorn": "^6.1.1",
     "clone": "^2.1.1",
     "compression": "^1.7.3",
     "core-js": "^2.5.7",
@@ -15,7 +16,7 @@
     "firebase-admin": "^6.4.0",
     "firebase-functions": "^2.1.0",
     "lodash": "^4.17.10",
-    "nuxt": "^2.3.4",
+    "nuxt-start": "^2.3.4",
     "vue": "^2.5.17",
     "vue-meta": "^1.5.5",
     "vue-router": "^3.0.1",
