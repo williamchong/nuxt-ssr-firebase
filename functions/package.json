@@ -8,7 +8,7 @@
     "lint": "./node_modules/.bin/eslint *.js"
   },
   "dependencies": {
-    "acorn": "^6.1.1",
+    "acorn": "^6.4.1",
     "clone": "^2.1.1",
     "compression": "^1.7.3",
     "core-js": "^2.5.7",
