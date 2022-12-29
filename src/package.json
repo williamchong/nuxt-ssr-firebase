@@ -13,14 +13,14 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "nuxt": "^2.3.4"
+    "nuxt": "^3.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "eslint": "^5.3.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-import-resolver-webpack": "^0.10.1",
-    "eslint-loader": "^2.1.1",
+    "eslint-loader": "^4.0.2",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-nuxt": "^0.3.0",
     "eslint-plugin-vue": "^5.1.0"
